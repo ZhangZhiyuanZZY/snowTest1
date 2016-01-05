@@ -53,6 +53,9 @@
     UIImage *image = [UIImage imageNamed:@"雪花"];
     self.snowHeight += 10;
     [image drawAtPoint:CGPointMake(50, self.snowHeight)];
+    if (self.snowHeight > rect.size.height) {
+        self.snowHeight = 0;
+    }
 }
 
 
